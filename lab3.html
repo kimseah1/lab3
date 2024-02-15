@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Menu with CSS </title>
+		
+		<link rel="stylesheet" href="css/white.css" />
+		<script type="text/javascript" src="js/popup.js"></script>
+		
+		<style>
+			ul
+			{
+				font-family: Arial; 
+				list-style-type:none;
+				background-color:#c5c5c5;
+				height:46px;
+				overflow:hidden;
+			}
+			li
+			{
+				float:left;
+			}
+			li a, .drp
+			{
+				  display: inline-block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration:none;
+				  
+			}
+			li .menu-item
+			{
+				
+				display:inline-block;
+			}
+			
+			.menu-content
+			{
+				
+				display:none;
+				position:absolute;
+				background-color:#f8f8f8;
+				z-index:1;
+				
+				
+			}
+			 
+			A:hover
+			{
+  				background-color: blue;
+			}
+			
+			.menu-content a{
+			  font-family: Arial;
+			  color: black;
+			  padding: 12px 16px;
+			  text-decoration: none;
+			  display: block;
+			  
+			}
+			
+			.menu-item:hover .menu-content
+			{
+				display:block;
+				
+			}
+			
+			
+			h1{
+				color:blue;
+				font-family:Arial;
+			}
+			
+			
+		</style>
+		
+	</head>
+
+
+	<body bgcolor="#fff">
+		<br><br><br>
+	
+	<h1 align="center"> JBU Online Store </h1>
+	
+
+	
+	<ul>
+		<li class="menu-item"><a href="#" class="drp">Books </a>
+			<div class="menu-content">
+				
+				<a  href="add_book.php">Add Book</a><br>
+				<a  href="remove_book.php">Remove Book</a><br>
+				<a href="display_books.php">Display all Books</a><br>
+			</div>
+		
+		</li>
+		
+		<li class="menu-item"><a href="#" class="drp">Books </a>
+		<div class="menu-content">
+			<a  href="add_book.php">Add Book</a><br>
+			<a  href="remove_book.php">Remove Book</a><br>
+			<a href="display_books.php">Display all Books</a><br>
+		</div>
+		
+		</li>
+		
+		<li class="menu-item"><a href="#" class="drp">Users </a>	
+		<div class="menu-content">
+			<a href="add_user.php">Add User</a><br>
+			<a href="remove_user.php">Remove User</a><br>
+			<a href="display_users.php">Display all Users</a><br>
+		</div>
+		</li>
+				 
+</ul>
+
+<button onclick="myFunction()"><img src="img/cart.png" width=10%/></button>
+
+<div class="cartImg" id="cart" style="display:none">
+<label id="output"></label>
+</div>
+
+		
+		
+
+
+	<p align="center"> Welcome to JBU's Online store - open for faculty/staff and students!<p>
+	
+	
+	<table>
+		
+		
+		<tr>
+			<td> <a href = "javascript:void(0)" onclick="popupfunction('1')" class=linktext>
+			<img src="img/fanta.jpg" width ="100%"/><center><br>Fanta</center></a>
+			<center><button onclick = "addtocart()">Add to cart</button></center>
+			</td>
+
+			
+			<td> <a href = "javascript:void(0)" onclick="popupfunction('2')" class=linktext> <img src="img/sprite.jpg" width ="100%"/><center><br>Sprite</center></a></td> 
+			<td><a href = "javascript:void(0)" onclick="popupfunction('3')" class=linktext><img src="img/gingerale.jpg" width ="100%"/><center><br>GingerAle</center></a></td>
+			<td><a href = "javascript:void(0)" onclick="popupfunction('4')" class=linktext><img src="img/drpepper.jpg" width ="100%"/><center><br>Dr.Pepper</center></a></td> 
+			<td><a href = "javascript:void(0)" onclick="popupfunction('5')" class=linktext><img src="img/coke.jpg" width ="100%"/><center><br>Coca Cola</center></a></td> 
+			
+		</tr>
+
+	
+	</table>
+
+
+<div id="popup1" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img/fanta.jpg" width=30% /><br>Fanta<br><br>Price:$1000<br>Rating: 5<br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('1')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade1" class="black_content"></div>
+
+
+
+<div id="popup2" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img/sprite.jpg" width=30% /><br>Sprite<br><br>Price:$1000<br>Rating: 5<br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('2')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade2" class="black_content"></div>
+
+
+
+<div id="fade3" class="black_content"></div>
+
+<div id="popup3" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img/gingerale.jpg" width=30% /><br>Ginger Ale<br><br>Price:$1000<br>Rating: 5<br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('3')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade3" class="black_content"></div>
+
+
+<div id="fade4" class="black_content"></div>
+
+<div id="popup4" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img/drpepper.jpg" width=30% /><br>Dr. Pepper<br><br>Price:$1000<br>Rating: 5<br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('4')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade4" class="black_content"></div>
+
+
+<div id="fade5" class="black_content"></div>
+
+<div id="popup5" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img/coke.jpg" width=30% /><br>Cocal Cola<br><br>Price:$1000<br>Rating: 5<br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('5')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade5" class="black_content"></div>
+
+
+
+
+		</center>
+	</body>
+</html>
+
+
+
